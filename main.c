@@ -3,7 +3,6 @@
 #include <math.h>
 #include "proyecto.h"
 
-
 int main(){
 	
 	int menu,n;
