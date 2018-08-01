@@ -82,9 +82,3 @@ int main(){
      return 0;
 
 }
-int salarioHora(int i){                                         // i= al valor pagado por hora trabajada
-	int sueldo=160*i, liqui=0;                           // 8 horas diarias del lunes a viernes
-	liqui=((sueldo)-(sueldo*0,07)-(sueldo*0,1)+(sueldo*0,25)+30000);	
-	return liqui;
-	
-}
