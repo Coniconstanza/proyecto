@@ -39,11 +39,11 @@ void addTrabajador(Dpto* ht){		//Dado un departamento, preguntara los datos del 
 	ht_put(ht, datos->rut, datos)
 }
 
-void addDpto(Lista* list, char element[100]) {				//añade un departamento al final de la lista
+void addDpto(Lista* list, char element[100]) {				//aÃ±ade un departamento al final de la lista
 	addDptoAt(list, element, list->size);
 }
 
-void addDptoAt(Lista* list, char element[100], unsigned int pos) {		//añade un departamento en algún lugar de la lista
+void addDptoAt(Lista* list, char element[100], unsigned int pos) {		//aÃ±ade un departamento en algÃºn lugar de la lista
 	Dpto* nn;
 	Dpto* cn;
 	Dpto* tmpl;
@@ -87,7 +87,7 @@ void addDptoAt(Lista* list, char element[100], unsigned int pos) {		//añade un d
 
 }
 
-Dpto* getDptoAt(Lista* list, unsigned int pos){   	//obtiene un departamento en una posición dada de la lista
+Dpto* getDptoAt(Lista* list, unsigned int pos){   	//obtiene un departamento en una posiciÃ³n dada de la lista
 	Dpto* tmp;
 	int i;
 	if (pos >= 0 && pos < list->size) {
@@ -104,7 +104,7 @@ Dpto* getDptoAt(Lista* list, unsigned int pos){   	//obtiene un departamento en 
 	}
 }
 
-void ht_put(Dpto* ht, int key, DatosTrabajador* value) {    	//añade los datos a un trabajador
+void ht_put(Dpto* ht, int key, DatosTrabajador* value) {    	//aÃ±ade los datos a un trabajador
 	int index = hashDiv(key, ht->tableSize);
 	Trabajador* entry = ht->table[index];
 	DatosTrabajador* oldValue;
@@ -144,4 +144,11 @@ void ht_put(Dpto* ht, int key, DatosTrabajador* value) {    	//añade los datos a
 
 int hashDiv(int key, int tableSize) {		//index de la tabla de hash
 	return key % tableSize;
+}
+
+int salarioHora(int i){                                         // i= al valor pagado por hora trabajada
+	int sueldo=160*i, liqui=0;                           // 8 horas diarias del lunes a viernes
+	liqui=((sueldo)-(sueldo*0,07)-(sueldo*0,1)+(sueldo*0,25)+30000);	
+	return liqui;
+	
 }
